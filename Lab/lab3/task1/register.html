@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <style>
+      body {
+          background-color: #85AFD4;
+          font-family: 'Lato', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+          color: white;
+          font-weight: bold;
+      }
+      p, input, label, a {
+          color: rgb(0, 0, 0);
+          font-weight: normal;
+      }
+      input[type=submit] {
+          background-color: #E47272;
+          color: white;
+          border-radius: 20px;
+          font-weight: bold;
+      }
+      a {
+          font-weight: bold;
+      }
+      table {
+          border: 2px solid white;
+      }
+      .centered {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+      }
+  </style>
+  </head>
+  <body>
+    <center>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/IBU_logo_reb-02-01.png" width="200" height="50">
+    <h1>International Burch University</h1>
+    <h1>Registration Form</h1>
+    <div class="container">
+      <form action="login.html" method="get">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <label for="firstname">Firstname:</label>
+              </td>
+              <td>
+                <input type="text" id="firstname" name="firstname" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="lastname">Lastname:</label>
+              </td>
+              <td>
+                <input type="text" id="lastname" name="lastname" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="username">Username:</label>
+              </td>
+              <td>
+                <input type="text" id="username" name="username" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="password">Password:</label>
+              </td>
+              <td>
+                <input type="password" id="password" name="password" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="birthday">Date of birth:</label>
+              </td>
+              <td>
+                <input type="date" id="birthday" name="birthday" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="birthplace">Place of birth:</label>
+              </td>
+              <td>
+                <input type="text" id="birthplace" name="birthplace" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="gender">Gender:</label>
+              </td>
+              <td>
+                <select id="gender" name="gender" required>
+                  <option value="" disabled selected>Select your gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="email">Email:</label>
+              </td>
+              <td>
+                <input type="email" id="email" name="email" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="phone">Phone:</label>
+              </td>
+              <td>
+                <input type="tel" id="phone" name="phone" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="haircolor">Hair color:</label>
+              </td>
+              <td>
+                <select id="haircolor" name="haircolor" required>
+                  <option value="" disabled selected>Select your color</option>
+                  <option style="background-color: black;" value="black">   </option>
+                  <option style="background-color: white;" value="white">   </option>
+                  <option style="background-color: brown;" value="brown">   </option>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="notes">Notes:</label>
+              </td>
+              <td>
+                <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="notifications">Receive notifications:</label>
+              </td>
+              <td>
+                <input type="checkbox" id="notifications" name="notifications" />
+              </td>
+            </tr>
+            <tr align="right">
+                <td colspan="2">
+                  <input type="submit" value="Register" class="register-button" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </center>
+    </body>
+  </html>
