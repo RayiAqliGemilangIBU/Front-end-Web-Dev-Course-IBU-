@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Mandiri KSN</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./Style.css" />
+  <link rel="stylesheet" href="./mobile-style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="https://www.instagram.com/mandiriosn/?hl=en">
+          <img
+            class="logo-image"
+            src="../assets/logo.png"
+            alt="Logo"
+            style="box-sizing: border-box; width: 100px; height: 100px;"
+          />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <button onclick="scrollToDiv('home_p')">HOME</button>
+                <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <button onclick="scrollToDiv('prices')">PRICE</button>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="dropdown">
+                <button>NEW IDEA</button>
+                <div class="dropdown-content">
+                  <a href="#">IDEA A</a>
+                  <a href="#">IDEA B</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <button onclick="scrollToDiv('fact')">FACT</button>
+            </li>
+            <li class="nav-item">
+              <button onclick="scrollToDiv('about')">ABOUT</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div id="home_p" class="col-md-7 col-sm-12 text-white">
+          <h6>GET YOUR MEDALS WITH</h6>
+          <h1>MANDIRI KSN</h1>
+          <p>Mandiri KSN | Quality Science Olympiad Training at Friendly Prices</p>
+          <button class="btn btn-light px-5 py-2 primary-btn" data-toggle="modal" data-target="#enrollModal">
+            Enroll now
+          </button>
+        </div>
+        <div class="col-md-5">
+          <img class="floating" src="../assets/header-img.png" alt="Floating Image">
+        </div>
+      </div>
+    </div>
+        <div class="modal fade" id="enrollModal" tabindex="-1" role="dialog" aria-labelledby="enrollModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollModalLabel">Enroll Now</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="registrationForm">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+              </div>
+              <div class="form-group">
+                <label for="course">COURSE</label>
+                <input type="text" class="form-control" id="course" placeholder="Enter  COURSE that you want">
+              </div>
+              <div class="form-group">
+                <label for="courseLevel">COURSE LEVEL</label>
+                <input type="text" class="form-control" id="courseLevel" placeholder="Level that you want">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+  <main>
+    <section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="../assets/ceo.png" alt="Pray" class="" />
+            </div>
+          </div>
+          <div  id="about" class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Mr. Ervan Maulana Ilyas</h1>
+              <p class="pt-4">
+                Mandiri KSN is a service company engaged in the education industry sector, specifically providing 
+                tutoring services in preparation for winning competitive talent events, as well as intensive assistance 
+                for college entrance preparation that can be easily accessed by all Indonesian young talents.
+              </p>
+              <p>
+                Established since 2021 and legalized on August 8, 2023, Mandiri KSN or known as 
+                MKSN has organized various training and learner development programs in the field 
+                of science, according to market needs and student learning behavior.
+              </p>
+              <img src="../assets/ttd.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section  id ="fact" class="section-2 container-fluid p-0">
+      <div class="cover">
+        <div class="overlay"></div>
+        <div class="content text-center">
+          <h1>The history we have made</h1>
+          <p>
+            we have helped young talents get as many dream medals as possible
+          </p>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+        <div  class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+          <div class="rect">
+            <h1>2345</h1>
+            <p>Honorable Mention</p>
+          </div>
+          <div class="rect">
+            <h1>6784</h1>
+            <p>Bronze Medals</p>
+          </div>
+          <div class="rect">
+            <h1>1056</h1>
+            <p>Silver Medals</p>
+          </div>
+          <div class="rect">
+            <h1>9152</h1>
+            <p>Gold Medals</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id ="prices" class="purchase text-center">
+        <h1><b>Select the Training Package That Fits You Best!!!</b></h1>
+        <p>
+          Mandiri KSN offers budget-friendly training packages for students preparing for science olympiads.
+        </p>
+        <div class="cards">
+          <div class="d-flex flex-row justify-content-center flex-wrap">
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">WARIOR</h5>
+                </div>
+                <p class="card-text">
+                  <ul>
+                    <li>Online Training (2 Hours per session)</li>
+                    <li>8 online sessions within 30 days</li>
+                    <li>Tryouts and reports</li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                </ul>
+                </p>
+                <div class="pricing">
+                  <h1>$100</h1>
+                  <a href="#" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">KNIGHT</h5>
+                </div>
+                <p class="card-text">
+                  <ul>
+                    <li>Online Training (2 Hours per session)</li>
+                    <li>8 online sessions within 30 days</li>
+                    <li>Tryouts and reports</li>
+                    <li>Offline Training for 2 weeks at a 5-star hotel</li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                    <li style="color: aliceblue;"></li>
+                </ul>
+                
+                </p>
+                <div class="pricing">
+                  <h1>$500</h1>
+                  <a href="#" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">PRINCE</h5>
+                </div>
+                <p class="card-text">
+                  <ul>
+                    <li>Online Training (2 Hours per session)</li>
+                    <li>8 sessions within 30 days</li>
+                    <li>Tryouts and reports</li>
+                    <li>Offline Training for 2 weeks at a 5-star hotel</li>
+                    <li>Practical Classes conducted at TOP universities</li>
+                    <li>Free consultations with a psychiatrist for one year</li>
+                </ul>
+                </p>
+                <div class="pricing">
+                  <h1>Contact Us</h1>
+                  <a href="#" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-3 container-fluid p-0 text-center">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h1>REMEMBER</h1>
+          <p>
+            "Embrace the challenge, for it is the forge that shapes greatness. 
+            With unwavering determination and relentless effort, you can turn your 
+            aspirations into golden achievements. Keep your eyes on the stars, and 
+            let your passion fuel your pursuit. You are not just reaching for a medal; 
+            you are reaching for the cosmos.”
+          </p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section-4">
+      <div class="container text-center">
+        <h1 class="text-dark">
+          "What do the champions say about us?"
+        </h1>
+      </div>
+      <div class="team row ">
+        <div class="col-md-4 col-12 text-center">
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src="../assets/medal1.jpg" class="img-fluid border-radius p-4" alt="">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Raden Andika W.W.</h3>
+                  <p class="card-text">
+                    My journey with Mandiri KSN's biology olympiad preparation
+                     training was nothing short of transformative. The program's rigor and
+                      depth of content challenged me to think critically and apply my knowledge 
+                      creatively. The instructors were not only experts in their fields but also 
+                      passionate about nurturing our potential. Through intensive practice sessions 
+                      and mock exams, I honed my skills and gained confidence in tackling complex 
+                      biological concepts. Finally, winning the silver medal was a testament 
+                       the invaluable guidance and support I received from Mandiri KSN.
+                  </p>
+                  <p class="text-black-50">Silver Medal of Biology Olimpiad</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-12">
+            <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                <div class="carousel-inner text-center">
+                  <div class="carousel-item active">
+                    <div class="card mr-2 d-inline-block shadow">
+                      <div class="card-img-top">
+                        <img src="../assets/sanny.jpg" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      </div>
+                      <div class="card-body">
+                        <h3 class="card-title">Sanny Ong</h3>
+                        <p class="card-text">
+                          I had a positive experience at Mandiri KSN during my science olympiad
+                           preparation. The institute provided comprehensive study materials and
+                            regular mock tests that mimicked the olympiad setting. The interactive
+                             sessions allowed us to collaborate and learn from different perspectives. 
+                             The instructors were approachable and offered valuable feedback to 
+                             improve our problem-solving abilities. Thanks to Mandiri KSN, I feel 
+                             confident and well-prepared for the olympiad challenges. </p>
+                        <p class="text-black-50">Silver Medal of Earth science Olympiad</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card  d-inline-block mr-2 shadow">
+                      <div class="card-img-top">
+                        <img src="../assets/aryo-razak.webp" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      </div>
+                      <div class="card-body">
+                        <h3 class="card-title">Aryo Razak</h3>
+                        <p class="card-text">
+                          My experience with Mandiri KSN's chemistry olympiad training was
+                           nothing short of remarkable. The program's comprehensive curriculum
+                            and hands-on approach allowed me to delve deep into the world of 
+                            chemistry. The instructors were exceptional, providing valuable
+                             insights and guidance throughout the training. Winning the gold 
+                             medal and being recognized as the absolute winner in the 
+                             competition was a testament to the top-notch training I received
+                              at Mandiri KSN. I am grateful for the opportunity to hone my 
+                              skills and achieve success in the chemistry olympiad.                        </p>
+                        <p class="text-black-50">Gold Medal and Absolute Winner of Chemistr Olimpiad</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        </div>
+        <div class="col-md-4 col-12 text-center">
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src="../assets/imomedal.jpg" class="img-fluid border-radius p-4" alt="">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Kinantan Arya Bagaspati</h3>
+                  <p class="card-text">
+                    Participating in Mandiri KSN's mathematics olympiad training program was a
+                    game-changer for me. The rigorous training and emphasis on problem-solving
+                    skills were instrumental in my success at the International Mathematical
+                    Olympiad (IMO). Mandiri KSN's approach not only enhanced my mathematical
+                    abilities but also instilled confidence in tackling challenging problems.
+                    I credit Mandiri KSN for playing a significant role in my journey to
+                    becoming an IMO champion.
+                  </p>
+                  <p class="text-black-50">Bronze Medal Of IMO</p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <p class="pt-4 text-muted">Copyright ©2024 All rights reserved 
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Newsletter</h4>
+          <p class="text-muted">Stay Updated About MKSN Event</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <a><i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script src="./main.js"></script>
+<script>
+    function scrollToDiv(id) {
+      var element = document.getElementById(id);
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+</script>
+</body>
+
+</html>
