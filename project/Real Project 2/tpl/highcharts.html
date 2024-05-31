@@ -1,0 +1,223 @@
+<section class="">
+  <div class="mx-auto max-w-screen-l px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    
+    <header class="text-center mt-24">
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Sales Report</h2>
+      <p class="mx-auto mt-4 max-w-md text-gray-500">
+        Review our detailed sales analysis across various product categories.
+      </p>
+
+      <!-- Bagian tombol navigasi -->
+      <div class="mt-8 flex justify-center space-x-4">
+        <button onclick="scrollToSection('line')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Sales Grow Report</button>
+        <button onclick="scrollToSection('bars')" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700">Size Report</button>
+        <button onclick="scrollToSection('pie_chart')" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700">Material Report</button>
+      </div>
+    </header>
+    
+    <div class="mt-24">
+      <h3 class="text-lg font-bold text-gray-900">Sales Grow Report</h3>
+      <p class="mt-2 text-gray-500">Detailed analysis of sales growth...</p>
+      <div id="line" >
+      </div>
+      <!-- Konten lebih lanjut -->
+    </div>
+    
+    <div class="mt-24">
+      <h3 class="text-lg font-bold text-gray-900">Size Report</h3>
+      <p class="mt-2 text-gray-500">Detailed analysis of size categories...</p>
+      <div id="bars">
+      </div>
+      <!-- Konten lebih lanjut -->
+    </div>
+    
+    <div class="mt-24">
+      <h3 class="text-lg font-bold text-gray-900">Material Report</h3>
+      <p class="mt-2 text-gray-500">Detailed analysis of material categories...</p>
+      <div id="pie_chart">
+      </div>
+      <!-- Konten lebih lanjut -->
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+  // Highcharts scripts
+  Highcharts.chart("line", {
+    title: {
+      text: "Product Sales Growth by Category, 2010-2016",
+    },
+    subtitle: {
+      text: "Source: Internal Data",
+    },
+    yAxis: {
+      title: {
+        text: "Number of Sales",
+      },
+    },
+    legend: {
+      layout: "vertical",
+      align: "right",
+      verticalAlign: "middle",
+    },
+    plotOptions: {
+      series: {
+        label: {
+          connectorAllowed: false,
+        },
+        pointStart: 2010,
+      },
+    },
+    series: [
+      {
+        name: "Basic Tee",
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
+      },
+      {
+        name: "Classic Hoodie",
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434],
+      },
+      {
+        name: "Denim Jacket",
+        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387],
+      },
+      {
+        name: "Sports Cap",
+        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111],
+      },
+    ],
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 500,
+          },
+          chartOptions: {
+            legend: {
+              layout: "horizontal",
+              align: "center",
+              verticalAlign: "bottom",
+            },
+          },
+        },
+      ],
+    },
+  });
+
+  Highcharts.chart("bars", {
+    chart: {
+      type: "column",
+    },
+    title: {
+      text: "Product Size Distribution",
+    },
+    xAxis: {
+      categories: ["S", "M", "L", "XL", "XXL"],
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: "Number of Products",
+      },
+      stackLabels: {
+        enabled: true,
+        style: {
+          fontWeight: "bold",
+          color: (Highcharts.theme && Highcharts.theme.textColor) || "gray",
+        },
+      },
+    },
+    legend: {
+      align: "right",
+      x: -30,
+      verticalAlign: "top",
+      y: 25,
+      floating: true,
+      backgroundColor:
+        (Highcharts.theme && Highcharts.theme.background2) || "white",
+      borderColor: "#CCC",
+      borderWidth: 1,
+      shadow: false,
+    },
+    tooltip: {
+      headerFormat: "<b>{point.x}</b><br/>",
+      pointFormat: "{series.name}: {point.y}<br/>Total: {point.stackTotal}",
+    },
+    plotOptions: {
+      column: {
+        stacking: "normal",
+        dataLabels: {
+          enabled: true,
+          color:
+            (Highcharts.theme && Highcharts.theme.dataLabelsColor) || "white",
+        },
+      },
+    },
+    series: [
+      {
+        name: "Basic Tee",
+        data: [5, 3, 4, 7, 2],
+      },
+      {
+        name: "Classic Hoodie",
+        data: [2, 2, 3, 2, 1],
+      },
+      {
+        name: "Denim Jacket",
+        data: [3, 4, 4, 2, 5],
+      },
+    ],
+  });
+
+  Highcharts.chart("pie_chart", {
+    chart: {
+      type: "pie",
+      options3d: {
+        enabled: true,
+        alpha: 45,
+        beta: 0,
+      },
+    },
+    title: {
+      text: "Material Composition of Products",
+    },
+    tooltip: {
+      pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: "pointer",
+        depth: 35,
+        dataLabels: {
+          enabled: true,
+          format: "{point.name}",
+        },
+      },
+    },
+    series: [
+      {
+        type: "pie",
+        name: "Material share",
+        data: [
+          ["Cotton", 45.0],
+          ["Polyester", 26.8],
+          {
+            name: "Denim",
+            y: 12.8,
+            sliced: true,
+            selected: true,
+          },
+          ["Other", 15.4],
+        ],
+      },
+    ],
+  });
+</script>
