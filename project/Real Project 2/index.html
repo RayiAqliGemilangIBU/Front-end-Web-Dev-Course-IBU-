@@ -104,6 +104,7 @@
                 <option value="#forms">Forms</option>
                 <option value="#product">Product</option>
                 <option value="#faq">FAQs</option>
+                <option value="#hotover">HOT OVER</option>
                 <option value="javascript:void(0);" onclick="UserService.logout()">Logout</option>
             </select>
         </div>
@@ -123,6 +124,7 @@
         <section id="forms" class="p-8"></section>
         <section id="product" class="p-8"></section>
         <section id="faq" class="p-8" data-load="tpl/faq.html"></section>
+        <section id="hotover" class="p-8" data-load="tpl/hotover.html"></section>
     </main>
     
     <script>
@@ -134,15 +136,17 @@
     
             if (!user.admin) {
                 navContent = `
+                    <a href="#hotover" class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">Hot Over</a>
                     <a href="#product" class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">Product</a>
                     <a href="#faq" class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">FAQs</a>
                     <a href="javascript:void(0);" class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700" onclick="UserService.logout()">Logout</a>
                 `;
                 mainContent = `
+                    <section id="hotover" data-load="tpl/hotover.html"></section>
                     <section id="product"></section>
                     <section id="faq" data-load="tpl/faq.html"></section>
                 `;
-                window.location.hash = "#product"; // Direct to the product page
+                window.location.hash = "#hotover"; // Direct to the product page
             } else {
                 navContent = `
                     <a href="#customersInformation" class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">Customers Information</a>

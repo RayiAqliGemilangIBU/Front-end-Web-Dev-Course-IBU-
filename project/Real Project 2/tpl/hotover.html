@@ -1,0 +1,59 @@
+<!-- New Hot Offer Section -->
+<section class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header class="text-center mt-24">
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Best Selling Products</h2>
+      <p class="mx-auto mt-4 max-w-md text-gray-500">
+        Don't miss out on this limited offer, order now and enjoy our best products!
+      </p>
+    </header>
+  
+    <div class="mt-8 relative">
+      <a href="#" class="group block overflow-hidden" onclick="event.preventDefault(); openImageModal('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')">
+        <img
+          src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          alt="Basic Tee"
+          class="h-[450px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[600px]"
+        />
+  
+        <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-4 flex justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:underline group-hover:underline-offset-4">
+              Basic Tee
+            </h3>
+            <p class="mt-2">
+              <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+            </p>
+          </div>
+          <a href="#product"  class="text-blue-600">View More Product</a>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Modals and Scripts -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('imageModal')">&times;</span>
+      <img class="modal-image" id="imgModalContent">
+    </div>
+  </div>
+  
+  <main id="spapp" role="main" class="mt-32">
+    <section id="hotover" class="p-8" data-load="tpl/product.html"></section>
+</main>
+
+  <script>
+    function openImageModal(src) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('imgModalContent');
+      modal.style.display = "flex";
+      modalImg.src = src;
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = "none";
+    }
+  
+
+  </script>

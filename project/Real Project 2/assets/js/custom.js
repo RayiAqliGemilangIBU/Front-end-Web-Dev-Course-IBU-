@@ -32,6 +32,12 @@ $(document).ready(function () {
     load: "product.html",
   });
 
+  app.route({
+    view: "hotover",
+    load: "hotover.html",
+  });
+
+
 
   // run app
   app.run();

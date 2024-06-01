@@ -15,7 +15,7 @@ let UserService = {
       
       login: function (user) {
           $.ajax({
-              url: './data/users.json',
+              url: '/data/users.json',
               type: 'GET',
               dataType: 'json',
               success: function (data) {
